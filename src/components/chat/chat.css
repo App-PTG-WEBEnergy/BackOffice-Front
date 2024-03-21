@@ -1,0 +1,24 @@
+.custom-icon .anticon svg {
+    margin-bottom: 0px;
+}
+
+.message {
+    border-radius: 36px;
+    padding: 6px 10px;
+}
+
+.sender .message {
+    background: #f1f0f0;
+    color: black;
+    border-top-left-radius: 48px;
+}
+
+.receiver .message {
+    color: white;
+    border-top-right-radius: 48px;
+    background-color: #0099ff;
+}
+
+.ant-popover {
+    z-index: 999999;
+}

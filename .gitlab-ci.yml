@@ -1,0 +1,22 @@
+image: node
+
+stages:
+  - lint
+  - build
+
+eslint:
+  stage: lint
+  script:
+    - npm install
+    - npm install eslint
+    - node_modules/eslint/bin/eslint.js .
+build site:
+  image: node:10
+  stage: build
+  script:
+    - npm install --progress=false
+    - npm run build
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - build
